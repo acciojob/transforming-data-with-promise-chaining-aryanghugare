@@ -40,7 +40,7 @@ startButton.addEventListener("click",(e)=>{
 	setTimeout(()=>{
 		inputNumber += 10 ; 
 		output.innerHTML = ``
-		output.innerHTML =`Result : ${inputNumber}`
+		output.innerHTML =`Final Result : ${inputNumber}`
 	},6000)
 
 
