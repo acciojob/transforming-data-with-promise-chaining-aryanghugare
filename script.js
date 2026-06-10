@@ -57,25 +57,30 @@ function five(num) {
 }	
 
 	
-first(numr).then((data)=> { output.innerHTML = `Result: ${data}`
-		return data 				 
-	})
-.then((data)=>two(data)
-	 .then((data)=>{output.innerHTML = `Result: ${data}`
-		return data		   }))
-	.then((data)=>three(data)
-		 .then((data)=>{output.innerHTML = `Result: ${data}`
-					   return data 
-	}))
-	.then((data)=> four(data)
-	.then((data)=> {
-		output.innerHTML = `Result: ${data}`
-		return data ;
-	}))
-	.then((data)=> five(data)
-	.then((data)=> {
-		output.innerHTML = `Result: ${data}`
-		return data ;
-	}))
+first(numr)
+
+        .then((data) => {
+            output.innerHTML = `Result: ${data}`;
+            return two(data);
+        })
+
+        .then((data) => {
+            output.innerHTML = `Result: ${data}`;
+            return three(data);
+        })
+
+        .then((data) => {
+            output.innerHTML = `Result: ${data}`;
+            return four(data);
+        })
+
+        .then((data) => {
+            output.innerHTML = `Result: ${data}`;
+            return five(data);
+        })
+
+        .then((data) => {
+            output.innerHTML = `Final Result: ${data}`;
+        });
 
 }
